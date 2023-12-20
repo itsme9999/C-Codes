@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+	int no,n1,n2,n3,n4,s1,s2,s3,s4,temp,sum;
+  printf("Enter a 4 digit number");
+  scanf("%4d",&no);
+  
+  temp=no;
+  n1=no/1000;
+  no=no%1000;
+  n2=no/100;
+  no=no%100;
+  n3=no/10;
+  n4=no%10;
+
+  printf("%d %d %d %d ",n1,n2,n3,n4);
+  
+  s1=n1*1000;s2=n2*100;s3=n3*10;s4=n4;
+  sum=s1+s2+s3+s4;
+  printf(" Sum of Given Number is %d+%d+%d+%d = %d",s1,s2,s3,s4,sum);
+  return 0;
+  
+}
