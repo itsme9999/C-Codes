@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	float BS,NET,HRA,DA,PF,GS;
+	
+printf("Enter your basic salary");
+scanf("%f",&BS);
+
+HRA=BS*0.20;
+DA=BS*0.40;
+PF=BS*0.10;
+GS=BS+HRA+DA;
+NET=GS-PF;
+
+printf("\nHRA IS%f",HRA);
+printf("\nDA IS%f",DA);
+printf("\nPF IS%f",PF);
+printf("\nGS IS%f",GS);
+printf("\nYOUR NET SALARY IS %f:",NET);
+}
