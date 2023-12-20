@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-struct Person{
+typedef struct Person{
 
 char name[100];
 int Age;
 int rollno;
 float marks;
 
-};
+}person;
 int main()
 {
     struct Person p1,*ptrp1;
