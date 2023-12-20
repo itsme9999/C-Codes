@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int no,n1,n2,n3,temp,sum=0;
+	
+	printf("Enter a 3 digit number to check it is Armstrong or not:");
+	scanf("%3d",&no);
+  temp=no;
+  n1=no/100;
+  no=no%100;
+  n2=no/10;
+  no=no%10;
+  n3=no/1;
+  
+  sum=(n1*n1*n1)+(n2*n2*n2)+(n3*n3*n3);
+  if(temp==sum)
+  {
+  	printf("\nGiven number is Armstrong Number:%d",temp);
+  	
+  }
+  else 
+  {
+  	printf("\nGiven number is not armstrong number");
+  }
+
+  	return 0;
+}
