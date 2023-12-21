@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    FILE *fptr;
+    fptr=fopen("file.txt","r");
+    char ch;
+    int cnt=0, space=0, vowels=0;
+    char vow[] = "aeiouAEIOU";
+
+    if(fptr==NULL)
+    {
+        printf("Unable to open file");
+        return 1;
+    }
+    while ((ch=fgetc(fptr))!=EOF)
+    {
+        if(ch==' ')
+        {
+            space++;
+        }
+        else if(ch=='\n'|| ch=='\t')
+        {
+            cnt++;
+        }
+        else if(strchr(vow, ch))
+        {
+            vowels++;
+        }
+    }
+    printf("\n Spaces:%d",space);
+    printf("\n No of words:%d",cnt+1);
+    printf("\n No of vowels:%d",vowels);
+    return 0;
+   
+}
